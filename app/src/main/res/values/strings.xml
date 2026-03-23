@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ListeDeTaches</string>
+    <string name="hello_text">Hello World</string>
+    <string name="btn_ajouter">Ajouter une tâche</string>
+    <string name="nouvelle_tache">Nouvelle tâche</string>
+    <string name="titre_tache">Titre de la tâche</string>
+    <string name="description">Description</string>
+    <string name="categorie">Catégorie</string>
+    <string name="priorite">Priorité</string>
+    <string name="enregistrer">Enregistrer</string>
+    <string name="annuler">Annuler</string>
+</resources>

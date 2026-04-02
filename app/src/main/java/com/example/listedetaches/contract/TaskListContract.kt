@@ -8,7 +8,7 @@ import com.example.listedetaches.model.Task
 interface TaskListContract {
 
 
- // Le Presentateur appelle ces fonctions
+ // Le Presentateur appelle ces fonctions pour l'affichage
     interface View{
         // Afficher taches
         fun showTasks(tasks: List<Task>)
@@ -23,7 +23,7 @@ interface TaskListContract {
         fun navigateToEditTask(task: Task)
     }
 
-    // La Vue demande au Presentateur
+    // La Vue demande au Presentateur pour traiter des actions
     interface Presenter{
 
         // Charger toutes les tâches depuis le Repository

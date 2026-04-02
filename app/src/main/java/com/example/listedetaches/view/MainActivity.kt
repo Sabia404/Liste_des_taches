@@ -21,8 +21,11 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 // Code généré à l'aide de Claude (Anthropic)
 // Description : Activité principale affichant la liste des tâches
+
+// TaskListContract.View doit implementé toutes ses funs
 class MainActivity : AppCompatActivity(), TaskListContract.View {
 
+    // Les lateinit var seront utilisé dans onCreate()
     private lateinit var presenter: TaskListPresenter
     private lateinit var adapter: TaskAdapter
     private lateinit var recyclerView: RecyclerView
@@ -30,7 +33,7 @@ class MainActivity : AppCompatActivity(), TaskListContract.View {
     private lateinit var spinnerFilter: Spinner
     private lateinit var fab: FloatingActionButton
 
-    // Repository partagé en mémoire entre les deux activités
+    // Repository partagé en mémoire entre les deux activités (MainActivity et TaskFormActivity)
     companion object {
         val repository = TaskRepository()
     }
@@ -57,7 +60,11 @@ class MainActivity : AppCompatActivity(), TaskListContract.View {
         )
 
         // Configuration du RecyclerView
+        //RecyclerView affiche les éléments en liste verticale
+        // l'un en dessous de l'autre
         recyclerView.layoutManager = LinearLayoutManager(this)
+
+        //Adaptateur qui va remplir chaque ligne
         recyclerView.adapter = adapter
 
         // Configuration du menu de filtrage
@@ -68,6 +75,7 @@ class MainActivity : AppCompatActivity(), TaskListContract.View {
     }
 
     // Recharge les tâches à chaque retour sur l'écran
+    // Par exemple après avoir ajouté ou modifié une tâche.
     override fun onResume() {
         super.onResume()
         presenter.loadTasks()

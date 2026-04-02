@@ -8,6 +8,11 @@ import com.example.listedetaches.repository.TaskRepository
 // Code généré à l'aide de Claude (Anthropic)
 // Description : Présentateur gérant la logique de la liste des tâches
 
+
+// Le presentateur recoit deux params à da création
+// 1. View : Pour parler à la Vue
+// 2. Repository : Pour accéder aux données
+// TaskListContract.Presenter : Obligé d'implémenter tous les fonctions
 class TaskListPresenter(
     private val view: TaskListContract.View,
     private val repository: TaskRepository
@@ -32,6 +37,16 @@ class TaskListPresenter(
         else view.showTasks(tasks)
     }
 
+
+    /*
+    * Si isDone était true -> Il devient false
+    * Si isDone était false -> Il devient true
+    *
+    * On utilise plutot copy() puisque Task est un data class. De plus,
+    * dans kotlin onne modifie pas directement les propriétées. Donc, on fait
+    * une copy
+    *
+    * */
     override fun toggleTaskDone(task: Task) {
         val updated = task.copy(isDone = !task.isDone)
         repository.updateTask(updated)

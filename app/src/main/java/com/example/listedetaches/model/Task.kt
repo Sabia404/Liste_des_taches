@@ -1,5 +1,8 @@
 package com.example.listedetaches.model
 
+// Code généré à l'aide de Claude (Anthropic)
+// Description : Modèle de données représentant une tâche
+
 import java.util.UUID
 data class Task(
 

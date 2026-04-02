@@ -12,6 +12,9 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
+// Code généré à l'aide de Claude (Anthropic)
+// Description : Tests bout-en-bout des parcours utilisateur principaux
+
 @RunWith(AndroidJUnit4::class)
 class TaskListE2ETest {
 

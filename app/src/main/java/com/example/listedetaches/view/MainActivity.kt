@@ -19,6 +19,8 @@ import com.example.listedetaches.presenter.TaskListPresenter
 import com.example.listedetaches.repository.TaskRepository
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
+// Code généré à l'aide de Claude (Anthropic)
+// Description : Activité principale affichant la liste des tâches
 class MainActivity : AppCompatActivity(), TaskListContract.View {
 
     private lateinit var presenter: TaskListPresenter

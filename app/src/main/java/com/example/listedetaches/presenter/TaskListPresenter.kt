@@ -5,6 +5,9 @@ import com.example.listedetaches.model.Category
 import com.example.listedetaches.model.Task
 import com.example.listedetaches.repository.TaskRepository
 
+// Code généré à l'aide de Claude (Anthropic)
+// Description : Présentateur gérant la logique de la liste des tâches
+
 class TaskListPresenter(
     private val view: TaskListContract.View,
     private val repository: TaskRepository

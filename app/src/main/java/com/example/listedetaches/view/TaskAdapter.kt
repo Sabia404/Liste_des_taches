@@ -11,6 +11,9 @@ import com.example.listedetaches.R
 import com.example.listedetaches.model.Priority
 import com.example.listedetaches.model.Task
 
+// Code généré à l'aide de Claude (Anthropic)
+// Description : Adaptateur RecyclerView pour afficher la liste des tâches
+
 class TaskAdapter(
     private var tasks: List<Task>,
     private val onTaskClick: (Task) -> Unit,        // Clic sur une tâche

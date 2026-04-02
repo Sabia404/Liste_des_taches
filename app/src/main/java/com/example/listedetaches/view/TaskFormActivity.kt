@@ -14,6 +14,9 @@ import com.example.listedetaches.presenter.TaskFormPresenter
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
+// Code généré à l'aide de Claude (Anthropic)
+// Description : Activité du formulaire d'ajout et modification d'une tâche
+
 class TaskFormActivity : AppCompatActivity(), TaskFormContract.View {
 
     private lateinit var presenter: TaskFormPresenter

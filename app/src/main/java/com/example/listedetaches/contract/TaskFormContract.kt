@@ -4,6 +4,8 @@ import com.example.listedetaches.model.Category
 import com.example.listedetaches.model.Priority
 import com.example.listedetaches.model.Task
 
+// Code généré à l'aide de Claude (Anthropic)
+// Description : Contrat MVP définissant les interactions entre la Vue et le Présentateur du formulaire
 interface TaskFormContract {
 
     interface View{
